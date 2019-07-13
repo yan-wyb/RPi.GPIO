@@ -1,8 +1,3 @@
-# RPi.GPIO-Odroid  
-  
-RPi.GPIO port with support for RPi, Odroid C1, Odroid C2, and Odroid XU4  
-  
-
 ## Based on:  
   
 RPi.GPIO by Ben Croston  
@@ -20,8 +15,8 @@ contains code from both projects, it is licensed under the slightly more restric
 4) sudo python setup.py build install  
   
 ## Test app is `test`
-* `cp -r test ../`
-* How to use it : `sudo python testVIMxxx.py`
+* `cp -r test/ ../` (Use in the installation directory will report an exception).
+* How to use it : `cd test/` & `sudo python testVIMxxx.py`.
 * It kills a test program that pulls up or down GPIO every five seconds.
   
 ## Notes  
