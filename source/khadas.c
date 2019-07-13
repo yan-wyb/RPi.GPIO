@@ -217,7 +217,6 @@ int wiringPiSetupKhadas(void)
 	}
 
 	if(piModel == PI_MODEL_KHADAS_VIM1){
-		printf("check with VIM1 \n");
 		gpio1  = (uint32_t *)mmap(0, BLOCK_SIZE, PROT_READ|PROT_WRITE,
 							MAP_SHARED, fd, VIM1_GPIOAO_BASE);
 		gpio  = (uint32_t *)mmap(0, BLOCK_SIZE, PROT_READ|PROT_WRITE,
