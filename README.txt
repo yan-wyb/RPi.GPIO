@@ -1,4 +1,4 @@
-This package provides a class to control the GPIO on a Raspberry Pi or ODROID.
+This package provides a class to control the GPIO on a Raspberry Pi or KHADAS.
 
 Note that this module is unsuitable for real-time or timing critical applications.  This is because you
 can not predict when Python will be busy garbage collecting.  It also runs under the Linux kernel which
@@ -13,5 +13,5 @@ Although hardware PWM is not available yet, software PWM is available to use on 
 
 For examples and documentation, visit http://sourceforge.net/p/raspberry-gpio-python/wiki/Home/
 
-ODROID support added by Jerry Fath
+Khadas support added by Jerry Fath
 
