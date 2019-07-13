@@ -6,7 +6,7 @@ GpioW  = 17
 def setup():
 	GPIO.setmode(GPIO.BCM)
 	GPIO.setup(GpioW,GPIO.OUT)
-	gpio.output(GpioW,GPIO.HIGH)
+	GPIO.output(GpioW,GPIO.HIGH)
 
 def blink():
 	while True:
