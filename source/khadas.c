@@ -429,7 +429,6 @@ void setInfoKhadas(char *hardware, void *vinfo)
 		info->manufacturer = "wesion";
 		info->processor = "AMLS912";
 	}else if(strcmp(hardware, "VIM") == 0){
-		printf("debug in VIM1 setInfoKhadas\n\n\n");
 		piModel = PI_MODEL_KHADAS_VIM1;
 		info->type = "Khadas VIM";
 		info->p1_revision = 3;

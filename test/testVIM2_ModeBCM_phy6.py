@@ -24,5 +24,5 @@ if __name__ == '__main__':
 	setup()
 	try:
 		blink()
-	except keyboardInterrupt:
+	except:
 		shutdown()
