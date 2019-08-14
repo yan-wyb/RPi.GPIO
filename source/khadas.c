@@ -614,18 +614,20 @@ int digitalReadKhadas(int pin)
 		ret = *(edge_gpio[bank] + (EDGE_GPIO_GET_OFFSET >> 2)) & (1 << gpioToShiftReg(pin)) ? HIGH : LOW;
 		setClkState(pin, EDGE_CLK_DISABLE);
 		return ret;
-	}else if((pin >= VIM3_GPIOAO_PIN_START && pin <= VIM3_GPIOAO_PIN_END)||
-		(pin >= VIM2_GPIOAO_PIN_START && pin <= VIM2_GPIOAO_PIN_END)||
-		(pin >= VIM1_GPIOAO_PIN_START && pin <= VIM1_GPIOAO_PIN_END)){
-		if ((*(gpio1 + gpioToGPLEVReg(pin)) & (1 << gpioToShiftReg(pin))) != 0)
-			return HIGH;
-		else
-			return LOW;
-	}else{		
-		if ((*(gpio + gpioToGPLEVReg(pin)) & (1 << gpioToShiftReg(pin))) != 0)
-			return HIGH;
-		else
-			return LOW;
+	}else{
+		if((pin >= VIM3_GPIOAO_PIN_START && pin <= VIM3_GPIOAO_PIN_END)||
+			(pin >= VIM2_GPIOAO_PIN_START && pin <= VIM2_GPIOAO_PIN_END)||
+			(pin >= VIM1_GPIOAO_PIN_START && pin <= VIM1_GPIOAO_PIN_END)){
+			if ((*(gpio1 + gpioToGPLEVReg(pin)) & (1 << gpioToShiftReg(pin))) != 0)
+				return HIGH;
+			else
+				return LOW;
+		}else{		
+			if ((*(gpio + gpioToGPLEVReg(pin)) & (1 << gpioToShiftReg(pin))) != 0)
+				return HIGH;
+			else
+				return LOW;
+		}
 	}
 	return -1;
 }
